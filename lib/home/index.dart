@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("目录导航"),
+        title: const Text("目录导航1"),
       ),
       body: MyMenuItem(
         title: "widgets组件",
