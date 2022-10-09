@@ -40,14 +40,12 @@ class _SplashScreenState extends State<SplashScreen>
               height: double.infinity,
               controller: _controller,
               onLoaded: (p0) {
-                _controller.forward()
-                    // .whenComplete(
-                    //     () => Navigator.pushReplacement(context, MaterialPageRoute(
-                    //           builder: (context) {
-                    //             return const HomePage();
-                    //           },
-                    //         )))
-                    ;
+                _controller.forward().whenComplete(
+                    () => Navigator.pushReplacement(context, MaterialPageRoute(
+                          builder: (context) {
+                            return const HomePage();
+                          },
+                        )));
               },
             )),
         Positioned(
@@ -69,20 +67,20 @@ class _SplashScreenState extends State<SplashScreen>
                       _controller.duration;
                       return GestureDetector(
                         onTapDown: (details) {
-                          if( _controller.isCompleted){
-                              Navigator.pushReplacement(context, MaterialPageRoute(
-                              builder: (context) {
-                                return const HomePage();
-                              },
-                            ));
-                          }
+                          Navigator.pushReplacement(context, MaterialPageRoute(
+                            builder: (context) {
+                              return const HomePage();
+                            },
+                          ));
                         },
-                        child: Text(
-                          _controller.isCompleted ? "跳过" : "${3 - p}",
+                        child: DefaultTextStyle(
                           style: const TextStyle(
                               decoration: TextDecoration.none,
-                              fontSize: 16,
+                              fontSize: 15,
                               color: Colors.white),
+                          child: Text(
+                            "跳过 ${3 - p}",
+                          ),
                         ),
                       );
                     },
