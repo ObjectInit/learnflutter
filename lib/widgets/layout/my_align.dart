@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -6,6 +7,22 @@ class MyAlign extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ConstrainedBox(
+            constraints: BoxConstraints.loose(const Size(100, 100)),
+            child: const ColoredBox(
+              color: Colors.blue,
+              child: Align(
+                child: Text("Hello World"),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
