@@ -17,6 +17,7 @@ class WidgetsIndex extends StatelessWidget {
         children: [
           MyMenuItem(
             title: "布局类widgets",
+            subTitle: "布局类容器一般不可以直接给宽高，它的大小要么随内容，要么占满",
             builder: (context) => const LayoutWidgetsIndex(),
           ),
           MyMenuItem(
