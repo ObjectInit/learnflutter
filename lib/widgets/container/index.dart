@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:learnflutter/CommonWidget/menus_item.dart';
 import 'package:learnflutter/widgets/container/my_clip.dart';
+import 'package:learnflutter/widgets/container/my_padding.dart';
 
 class ContainerWidgetsIndex extends StatelessWidget {
   const ContainerWidgetsIndex({super.key});
@@ -13,7 +14,8 @@ class ContainerWidgetsIndex extends StatelessWidget {
       appBar: AppBar(),
       body: ListView(
         children: [
-          MyMenuItem(title: "Clip（剪裁）组件", builder:(context) => const MyClipWidget(),)
+          MyMenuItem(title: "Clip（剪裁）组件", builder:(context) => const MyClipWidget(),),
+          MyMenuItem(title: "Padding组件", builder:(context) => const MyPadding(),)
         ],
       ),
     );
