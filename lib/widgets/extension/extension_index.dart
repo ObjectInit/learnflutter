@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart'; 
 import 'package:learnflutter/commonwidget/menus_item.dart';
-import 'package:learnflutter/extension/my_bezier.dart';
+import 'package:learnflutter/widgets/extension/my_bezier.dart';
 
 class ExtensionIndex extends StatelessWidget {
   const ExtensionIndex({super.key});
