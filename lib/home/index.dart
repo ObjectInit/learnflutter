@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learnflutter/extension/extension_index.dart';
 import 'package:learnflutter/widgets/index.dart';
 import 'package:learnflutter/commonwidget/menus_item.dart';
 
@@ -21,6 +22,10 @@ class HomePage extends StatelessWidget {
           MyMenuItem(
             title: "核心原理",
             builder: (BuildContext context) => const WidgetsIndex(),
+          ),
+           MyMenuItem(
+            title: "扩展",
+            builder: (BuildContext context) => const ExtensionIndex(),
           )
         ],
       ),
