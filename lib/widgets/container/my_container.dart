@@ -67,13 +67,14 @@ class MyContainer extends StatelessWidget {
 
 class MyClipper extends CustomClipper<Path> {
   @override
-  Path getClip(Size size) { 
-    var path=Path();
+  Path getClip(Size size) {
+    var path = Path();
     path.lineTo(0, 50);
 
-    var controllerPoint=Offset(0, 100);
-    var endPoint=Offset(50, 100);
-    path.quadraticBezierTo(controllerPoint.dx, controllerPoint.dy, endPoint.dx, endPoint.dy);
+    var controllerPoint = Offset(0, 100);
+    var endPoint = Offset(50, 100);
+    path.quadraticBezierTo(
+        controllerPoint.dx, controllerPoint.dy, endPoint.dx, endPoint.dy);
     return path;
   }
 
