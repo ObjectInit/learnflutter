@@ -11,7 +11,10 @@ class MyBezier extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-          Image.asset("assets/images/16075459-cf42c00869beb95e.webp",width: 100,),
+          Image.asset(
+            "assets/images/16075459-cf42c00869beb95e.webp",
+            width: 100,
+          ),
           Row(
             children: const [
               Text("Hello World"),
