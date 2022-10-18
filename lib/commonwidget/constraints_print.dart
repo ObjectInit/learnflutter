@@ -7,7 +7,7 @@ class ConstraintsPrint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
        
-    return LayoutBuilder(
+    return LayoutBuilder( 
       builder: (BuildContext, BoxConstraints) { 
         assert(() { 
           print( "${context.findAncestorWidgetOfExactType<Widget>()}${BoxConstraints}" );

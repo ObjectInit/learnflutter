@@ -5,6 +5,7 @@ import 'package:learnflutter/CommonWidget/menus_item.dart';
 import 'package:learnflutter/widgets/container/my_clip.dart';
 import 'package:learnflutter/widgets/container/my_container.dart';
 import 'package:learnflutter/widgets/container/my_decoratedbox.dart';
+import 'package:learnflutter/widgets/container/my_fitbox.dart';
 import 'package:learnflutter/widgets/container/my_listview.dart';
 import 'package:learnflutter/widgets/container/my_padding.dart';
 
@@ -21,7 +22,8 @@ class ContainerWidgetsIndex extends StatelessWidget {
           MyMenuItem(title: "Padding组件", builder:(context) => const MyPadding(),),
           MyMenuItem(title: "ListView", builder:(context) => const MyListView(),),
           MyMenuItem(title: "DecoratedBox装饰", builder:(context) => const MyDecoratedBox(),),
-          MyMenuItem(title: "Container", builder:(context) => const MyContainer(),)
+          MyMenuItem(title: "Container", builder:(context) => const MyContainer(),),
+          MyMenuItem(title: "FittedBox", builder:(context) => const MyFittedBox(),)
         ],
       ),
     );

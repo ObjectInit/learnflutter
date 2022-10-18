@@ -35,12 +35,7 @@ class MyBezier extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-          Container(
-            width: double.infinity,
-            height: double.infinity,
-            color: Colors.blue, 
-          )
+          ), 
         ],
       ),
     );
