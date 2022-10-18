@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:learnflutter/commonwidget/menus_item.dart';
+import 'package:learnflutter/widgets/component/my_scaffold.dart';
 
 class ComponentIndex extends StatelessWidget {
   const ComponentIndex({super.key});
@@ -9,7 +9,14 @@ class ComponentIndex extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      
+      body: ListView(
+        children: [
+          MyMenuItem(
+            title: "Scaffold",
+            builder: (context) => const MyScaffold(),
+          )
+        ],
+      ),
     );
   }
 }

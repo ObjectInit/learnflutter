@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:learnflutter/commonwidget/menus_item.dart';
+import 'package:learnflutter/widgets/component/index.dart';
 import 'package:learnflutter/widgets/container/index.dart';
 import 'package:learnflutter/widgets/layout/index.dart';
 
- 
 class WidgetsIndex extends StatelessWidget {
   const WidgetsIndex({super.key});
 
@@ -23,7 +23,9 @@ class WidgetsIndex extends StatelessWidget {
           MyMenuItem(
               title: "容器类widgets",
               builder: (context) => const ContainerWidgetsIndex()),
-              
+          MyMenuItem(
+              title: "功能性widgets",
+              builder: (context) => const ComponentIndex()),
         ],
       ),
     );
