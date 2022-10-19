@@ -19,16 +19,13 @@ abstract class BaseScaffodWidget extends StatelessWidget {
 }
 
 class A {
-  int? _age; 
+  int? _age;
 
-  A(int age){
-    this._age=age;
+  A(int age) {
+    this._age = age;
   }
 }
 
-class B extends A{
-  B(int age):super(age);
-   
+class B extends A {
+  B(int age) : super(age);
 }
- 
- 
