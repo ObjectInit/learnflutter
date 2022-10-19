@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learnflutter/commonwidget/constraints_print.dart';
 
 class MyClipWidget extends StatelessWidget {
   const MyClipWidget({super.key});
@@ -9,7 +10,8 @@ class MyClipWidget extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-          const Center(child: Text("Image 容器宽高会被约束(蓝色区域代表Image容器宽高),图片根据fit适应")),
+          const Center(
+              child: Text("Image 容器宽高会被约束(蓝色区域代表Image容器宽高),图片根据fit适应")),
           ClipOval(
             child: Image.network(
               "https://avatars.githubusercontent.com/u/22310718?v=4",
@@ -42,6 +44,20 @@ class MyClipWidget extends StatelessWidget {
               ),
             ),
           ),
+          Row(
+            children: [
+              Align(
+                alignment: Alignment.center,
+                child: ConstraintsPrint(
+                  child: Container(
+                    color: Colors.blue,
+                    width: 100,
+                    height: 100,
+                  ),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );

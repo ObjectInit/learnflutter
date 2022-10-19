@@ -33,7 +33,7 @@ class _MyListViewState extends State<MyListView> {
               );
             },
           )),
-          Divider(color: Colors.green, thickness: 10),
+          const Divider(color: Colors.green, thickness: 10),
           Expanded(
               child: ListView.separated(
                   itemBuilder: (context, index) {
@@ -43,8 +43,8 @@ class _MyListViewState extends State<MyListView> {
                   },
                   separatorBuilder: (context, index) {
                     return index % 2 == 0
-                        ? Divider()
-                        : Divider(
+                        ? const Divider()
+                        : const Divider(
                             color: Colors.blue,
                           );
                   },

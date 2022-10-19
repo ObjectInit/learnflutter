@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
         title: const Text("目录导航"),
       ),
       body: ListView(
-        children: [ 
+        children: [
           MyMenuItem(
             title: "widgets组件",
             builder: (BuildContext context) => const WidgetsIndex(),
@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
             title: "核心原理",
             builder: (BuildContext context) => const WidgetsIndex(),
           ),
-           MyMenuItem(
+          MyMenuItem(
             title: "扩展",
             builder: (BuildContext context) => const ExtensionIndex(),
           )
@@ -31,4 +31,9 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+}
+
+class A {
+  final int a;
+  A({this.a=0}) ;
 }
