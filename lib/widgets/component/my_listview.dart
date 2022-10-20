@@ -16,20 +16,14 @@ class _MyListViewState extends State<MyListView> {
       appBar: AppBar(),
       body: Column(
         children: [
-          MyState(
-            num: num,
-          ),
           Expanded(
               child: ListView.builder(
             itemCount: 20,
             cacheExtent: 100,
             // prototypeItem: ListTile(title: Text("1"),),
             itemBuilder: (context, index) {
-              print("$index item 创建");
-              return ConstraintsPrint(
-                child: ListTile(
-                  title: Text("$index"),
-                ),
+              return ListTile(
+                title: Text("$index"),
               );
             },
           )),
@@ -48,7 +42,24 @@ class _MyListViewState extends State<MyListView> {
                             color: Colors.blue,
                           );
                   },
-                  itemCount: 100))
+                  itemCount: 100)),
+          const Divider(color: Colors.green, thickness: 10),
+          Expanded(
+              child: Column(
+            children: [
+              const ListTile(
+                title: Text("标题头"),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) => ListTile(
+                    title: Text("$index"),
+                  ),
+                ),
+              )
+            ],
+          )),
         ],
       ),
       floatingActionButton: FloatingActionButton(

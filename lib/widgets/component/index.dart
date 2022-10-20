@@ -3,6 +3,7 @@ import 'package:learnflutter/commonwidget/menus_item.dart';
 import 'package:learnflutter/widgets/component/my_listview_dy.dart';
 import 'package:learnflutter/widgets/component/my_scaffold.dart';
 import 'package:learnflutter/widgets/component/my_scroll.dart';
+import 'package:learnflutter/widgets/component/my_scrollcontroller.dart';
 
 import 'my_listview.dart'; 
 
@@ -30,6 +31,10 @@ class ComponentIndex extends StatelessWidget {
            MyMenuItem(
             title: "ListView动态",
             builder: (context) =>   MyListViewDynimac(),
+          ),
+           MyMenuItem(
+            title: "ScrollController",
+            builder: (context) =>  const MyScrollController(),
           )
         ],
       ),
