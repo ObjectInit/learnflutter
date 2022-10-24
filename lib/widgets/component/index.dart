@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:learnflutter/commonwidget/menus_item.dart';
+import 'package:learnflutter/widgets/component/my_animatedlist.dart';
+import 'package:learnflutter/widgets/component/my_gridview.dart';
 import 'package:learnflutter/widgets/component/my_listview_dy.dart';
 import 'package:learnflutter/widgets/component/my_scaffold.dart';
 import 'package:learnflutter/widgets/component/my_scroll.dart';
 import 'package:learnflutter/widgets/component/my_scrollcontroller.dart';
 
-import 'my_listview.dart'; 
+import 'my_listview.dart';
 
 class ComponentIndex extends StatelessWidget {
   const ComponentIndex({super.key});
@@ -18,7 +20,7 @@ class ComponentIndex extends StatelessWidget {
         children: [
           MyMenuItem(
             title: "Scaffold",
-            builder: (context) => const MyScaffold(), 
+            builder: (context) => const MyScaffold(),
           ),
           MyMenuItem(
             title: "Scroller",
@@ -28,13 +30,21 @@ class ComponentIndex extends StatelessWidget {
             title: "ListView",
             builder: (context) => const MyListView(),
           ),
-           MyMenuItem(
+          MyMenuItem(
             title: "ListView动态",
-            builder: (context) =>   MyListViewDynimac(),
+            builder: (context) => MyListViewDynimac(),
           ),
-           MyMenuItem(
+          MyMenuItem(
             title: "ScrollController",
-            builder: (context) =>  const MyScrollController(),
+            builder: (context) => const MyScrollController(),
+          ),
+          MyMenuItem(
+            title: "AnimatedList",
+            builder: (context) =>  const MyAnimatedList(),
+          ),
+          MyMenuItem(
+            title: "GridView",
+            builder: (context) =>  const MyGridView(),
           )
         ],
       ),
