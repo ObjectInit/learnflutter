@@ -52,10 +52,17 @@ class _MyListViewState extends State<MyListView> {
               ),
               Expanded(
                 child: ListView.builder(
+                  addAutomaticKeepAlives: true,
                   shrinkWrap: true,
-                  itemBuilder: (context, index) => ListTile(
-                    title: Text("$index"),
-                  ),
+                  itemBuilder: (context, index) {
+                    print("$index item builder");
+                    return ListTile(
+                    
+                    title: MyState(
+                      num: index,
+                    ),
+                  );
+                  },
                 ),
               )
             ],
@@ -81,7 +88,7 @@ class MyState extends StatefulWidget {
   State<MyState> createState() => _MyStateState();
 }
 
-class _MyStateState extends State<MyState> {
+class _MyStateState extends State<MyState> with AutomaticKeepAliveClientMixin {
   int num = 0;
 
   @override
@@ -91,12 +98,24 @@ class _MyStateState extends State<MyState> {
   }
 
   @override
+  void dispose() {
+    print("$num dispose");
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
+    print("$num build $hashCode");
     return Container(
       width: 50,
       height: 50,
-      color: Colors.blue,
+      color: Colors.yellow,
       child: Text("$num"),
     );
   }
+  
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }

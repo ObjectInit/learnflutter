@@ -3,6 +3,7 @@ import 'package:learnflutter/commonwidget/menus_item.dart';
 import 'package:learnflutter/widgets/component/my_animatedlist.dart';
 import 'package:learnflutter/widgets/component/my_gridview.dart';
 import 'package:learnflutter/widgets/component/my_listview_dy.dart';
+import 'package:learnflutter/widgets/component/my_pageview.dart';
 import 'package:learnflutter/widgets/component/my_scaffold.dart';
 import 'package:learnflutter/widgets/component/my_scroll.dart';
 import 'package:learnflutter/widgets/component/my_scrollcontroller.dart';
@@ -40,11 +41,23 @@ class ComponentIndex extends StatelessWidget {
           ),
           MyMenuItem(
             title: "AnimatedList",
-            builder: (context) =>  const MyAnimatedList(),
+            builder: (context) => const MyAnimatedList(),
           ),
           MyMenuItem(
             title: "GridView",
-            builder: (context) =>  const MyGridView(),
+            builder: (context) => const MyGridView(),
+          ),
+          MyMenuItem(
+            title: "PageView",
+            builder: (context) => const MyPageView(),
+          ),
+          MyMenuItem(
+            title: "可滚动组件子项缓存",
+            builder: (context) => const MyPageView(),
+          ),
+          MyMenuItem(
+            title: "TabBarView",
+            builder: (context) => const MyPageView(),
           )
         ],
       ),

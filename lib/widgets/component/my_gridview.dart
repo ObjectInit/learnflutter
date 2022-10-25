@@ -10,7 +10,7 @@ class MyGridView extends StatefulWidget {
 
 class _MyGridViewState extends State<MyGridView> {
   @override
-  Widget build(BuildContext context) { 
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       body: ConstraintsPrint(
@@ -53,12 +53,12 @@ class _MyGridViewState extends State<MyGridView> {
               thickness: 6,
             ),
             Expanded(
-              
               child: GridView(
                 gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 100,  // 每行的项目数量为 区域大小/maxCrossAxisExtent -》 取整+1
+                  maxCrossAxisExtent:
+                      100, // 每行的项目数量为 区域大小/maxCrossAxisExtent -》 取整+1
                 ),
-                children: [
+                children: const [
                   ColoredBox(
                       color: Colors.grey,
                       child: Icon(
@@ -71,7 +71,6 @@ class _MyGridViewState extends State<MyGridView> {
                   Icon(Icons.abc),
                   Icon(Icons.abc),
                   ColoredBox(color: Colors.grey, child: Icon(Icons.abc)),
-                  Container(width: 150,height: 150,color: Colors.red,),
                   Icon(Icons.abc),
                   Icon(Icons.abc),
                   Icon(Icons.abc),
@@ -92,3 +91,11 @@ class _MyGridViewState extends State<MyGridView> {
     );
   }
 }
+
+ abstract class B {
+
+ }
+
+ class A implements B{
+  
+ }
