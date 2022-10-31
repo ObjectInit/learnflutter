@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:learnflutter/commonwidget/constraints_print.dart';
+import 'package:learnflutter/commonwidget/KeepAliveWrapper.dart';
 
 class MyTest extends StatefulWidget {
   const MyTest({super.key});
@@ -11,48 +9,61 @@ class MyTest extends StatefulWidget {
 }
 
 class _MyTestState extends State<MyTest> {
+  bool isKeepAlive=true;
+  String text="hello";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body:  Column(
-        children:const [
-          MyJust(),
-          MyJust(),
-          MyJust(),
-        ],
-      ),
+      body: mytest1(isKeepAlive: isKeepAlive,),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          setState(() {});
+          setState(() {
+            text="hello 2";
+            isKeepAlive=!isKeepAlive;
+          });
         },
       ),
     );
   }
 }
 
-class MyJust extends StatefulWidget {
-  const MyJust({super.key});
+
+class MyTest2 extends StatefulWidget {
+  final String text;
+  const MyTest2({super.key, required this.text});
 
   @override
-  State<MyJust> createState() => _MyJustState();
+  State<MyTest2> createState() => _MyTest2State();
 }
 
-class _MyJustState extends State<MyJust> {
+class _MyTest2State extends State<MyTest2> {
 
   @override
-  void didUpdateWidget(covariant MyJust oldWidget) {
-     print("didUpdateWidget");
+  void didUpdateWidget(covariant MyTest2 oldWidget) { 
     super.didUpdateWidget(oldWidget);
   }
 
   @override
   Widget build(BuildContext context) {
-    print("just build");
-    return Container(
-      color: Colors.blue,
-      width: 50,
-      height: 50,
+    return Container(child: Text(widget.text),);
+  }
+}
+
+class mytest1 extends StatelessWidget {
+  final bool isKeepAlive;
+  const mytest1({
+    Key? key,   this.isKeepAlive=true,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: 50,
+      itemBuilder: (context, index) {
+        print("build $index");
+        return KeepAliveWrapper(isKeepAlive: isKeepAlive, child: ListTile(title: Text("$index")));
+      },
     );
   }
 }

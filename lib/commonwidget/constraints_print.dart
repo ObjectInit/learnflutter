@@ -18,3 +18,9 @@ class ConstraintsPrint extends StatelessWidget {
     );
   }
 }
+
+
+class A{
+  final int age;
+  A(Widget child,int age):this.age=age;
+}
